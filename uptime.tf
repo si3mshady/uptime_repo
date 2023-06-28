@@ -41,18 +41,7 @@ resource "aws_instance" "uptime" {
             replacement: blackbox-exporter-node1:9115
     ' | sudo tee uptime.yml
 
-
-
-    # echo '
-    # scrape_configs:
-    #   - job_name: "blackbox"
-    #     metrics_path: /probe
-    #     params:
-    #       module: [http_2xx]  # Look for an HTTP 200 response.'  |  sudo tee blackbox.yml
-
-
-
-
+   
     # Start Docker services
     sudo systemctl enable docker
     sudo systemctl start docker
@@ -216,3 +205,4 @@ resource "aws_security_group" "webserver_sg" {
 
 
 # sudo less /var/log/cloud-init-output.log
+# https://www.stackhero.io/en/services/Prometheus/documentations/Blackbox-Exporter/Prometheus-Blackbox-Exporter-configuration
