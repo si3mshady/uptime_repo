@@ -206,3 +206,4 @@ resource "aws_security_group" "webserver_sg" {
 
 # sudo less /var/log/cloud-init-output.log
 # https://www.stackhero.io/en/services/Prometheus/documentations/Blackbox-Exporter/Prometheus-Blackbox-Exporter-configuration
+# https://youtu.be/5VrjOzIOJPw
